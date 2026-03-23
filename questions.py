@@ -42,7 +42,7 @@ while attempts > 0:
     if "_" not in progress:
         score += 6
         print("¡Ganaste!")
-
+        print(f"Puntaje final: {score}")
         break
 
     print(f"Intentos restantes: {attempts}")
