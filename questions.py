@@ -17,7 +17,11 @@ if choice not in categorias:
     exit()
 
 words = categorias[choice]
-word = random.choice(words)
+shuffled_words = random.sample(words, len(words))
+if not shuffled_words:
+    print("No quedan mas palabras")
+
+word = shuffled_words.pop()
 guessed = []
 attempts = 6
 score = 0
