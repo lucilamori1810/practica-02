@@ -31,6 +31,10 @@ def procesar_rondas(rounds):
         print("Ganador:", ganador)
         print("-" * 40)
 
+        calcular_promedios(estadisticas)
+        ordenados = ordenar_resultados(estadisticas)
+        mostrar_tabla(ordenados)
+
     return estadisticas
 
 
