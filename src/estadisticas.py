@@ -33,6 +33,7 @@ def procesar_rondas(rounds):
 
         calcular_promedios(estadisticas)
         ordenados = ordenar_resultados(estadisticas)
+        print("hola")
         mostrar_tabla(ordenados)
 
     return estadisticas
