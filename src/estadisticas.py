@@ -29,13 +29,14 @@ def procesar_rondas(rounds):
         estadisticas[ganador]["rondas_ganadas"] += 1
 
         print("Ganador:", ganador)
+
+        mostrar_tabla_ronda(puntajes_ronda)
         print("-" * 40)
 
-        calcular_promedios(estadisticas)
-        ordenados = ordenar_resultados(estadisticas)
-        print("hola")
-        mostrar_tabla(ordenados)
-
+    calcular_promedios(estadisticas)
+    ordenados = ordenar_resultados(estadisticas)
+    mostrar_tabla(ordenados)
+        
     return estadisticas
 
 
@@ -71,3 +72,10 @@ def mostrar_tabla(ordenados):
             "|",
             datos["promedio"]
         )
+
+def mostrar_tabla_ronda(puntajes_ronda):
+    print("Tabla de la ronda:")
+    print("Cocinero | Puntaje")
+
+    for participante, puntaje in sorted(puntajes_ronda.items(), key=lambda x: x[1], reverse=True):
+        print(participante, "|", puntaje)
